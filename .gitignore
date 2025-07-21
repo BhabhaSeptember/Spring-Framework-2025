@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+/.metadata/
+=======
+.metadata/
+
+echo target/ >> .gitignore
+git add .gitignore
+git commit -m "Ignore target folder"
+
+>>>>>>> 628b3ad (commit)

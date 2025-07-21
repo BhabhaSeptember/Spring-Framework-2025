@@ -9,11 +9,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-<<<<<<< HEAD
 
 import runnerz.run.Location;
 import runnerz.run.Run;
-=======
+
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.support.RestClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
@@ -26,7 +25,7 @@ import runnerz.user.UserHttpClient;
 import runnerz.user.UserRestClient;
 
 import java.util.List;
->>>>>>> 628b3ad (commit)
+
 
 @SpringBootApplication
 public class Application {
@@ -37,23 +36,18 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 	
-<<<<<<< HEAD
-	@Bean
-	CommandLineRunner runner() {
-		return args -> {
-			Run run = new Run(
-					1, 
-					"First Run", 
-					LocalDateTime.now(),
-					LocalDateTime.now().plus(1,ChronoUnit.HOURS),
-					5,
-					Location.OUTDOOR);
-			log.info("Run: " + run);
-=======
-<<<<<<< HEAD
+//	@Bean
+//	CommandLineRunner runner() {
+//		return args -> {
+//			Run run = new Run(
+//					1, 
+//					"First Run", 
+//					LocalDateTime.now(),
+//					LocalDateTime.now().plus(1,ChronoUnit.HOURS),
+//					5,
+//					Location.OUTDOOR);
+//			log.info("Run: " + run);
 
-=======
->>>>>>> 6149e55 (commit)
 //	@Bean
 //	CommandLineRunner runner(RunRepository runRepository) {
 //		return args -> {
@@ -92,10 +86,6 @@ public class Application {
 	
 //==============================================================================
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6149e55 (commit)
 	@Bean
 	UserHttpClient userHttpClient() {
 		RestClient restClient = RestClient.create("https://jsonplaceholder.typicode.com/");
@@ -116,7 +106,6 @@ public class Application {
 			User user = client.findById(1);
 			System.out.println("===== USER =====");
 			System.out.println(user);
->>>>>>> 628b3ad (commit)
 		};
 		
 	}
